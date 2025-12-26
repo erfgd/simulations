@@ -11,6 +11,7 @@ import inet.physicallayer.propagation.ConstantTimePropagation;
 import inet.visualizer.integrated.IntegratedVisualizer;
 
 
+
 network lalala
 {
     parameters:
@@ -20,30 +21,32 @@ network lalala
         int numServers;
         int numRelays;
         int numClients;
+        
 
     submodules:
         batman5Router[numRelays]: Batman5Router {
-            wlan[*].mgmtType = default("Ieee80211MgmtAdhoc");  // use adhoc management
+            //wlan[*].mgmtType = default("Ieee80211MgmtAdhoc");  // use adhoc management
             //@display("p=245.025,198.45");
-            @display("p=1045.3921,504.67203");
+            @display("p=570.76,456.60803");
         }
         clients[numClients]: Batman5Router {
-            wlan[*].mgmtType = default("Ieee80211MgmtAdhoc");  // use adhoc management
-            //@display("p=35.4375,272.3625");
+            //wlan[*].mgmtType = default("Ieee80211MgmtAdhoc");  // use adhoc management
+            @display("p=900.4375,900.3625");
+            //@display("p=200.35202,200.744");
         }
         server[numServers]: Batman5Router {
-            wlan[*].mgmtType = default("Ieee80211MgmtAdhoc");  // use adhoc management
+            //wlan[*].mgmtType = default("Ieee80211MgmtAdhoc");  // use adhoc management
             //@display("p=700, 700");
-            @display("p=270.36002,504.67203");
+            @display("p=800.96,1000.744");
         }
         radioMedium: RadioMedium {
-            @display("p=603,184");
+            @display("p=503,184");
         }
         constantTimePropagation: ConstantTimePropagation {
-            @display("p=586,294");
+            @display("p=571.16003,222.296");
         }
         configurator: IPv4NetworkConfigurator {
-            @display("p=581,378");
+            @display("p=576.768,408.544");
         }
 
         visualizer: IntegratedVisualizer {
