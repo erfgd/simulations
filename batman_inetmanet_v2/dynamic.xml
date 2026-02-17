@@ -1,0 +1,9 @@
+<scenario>
+    <at t="5.5">
+        <tell module="lifecycleController" target="batman5Router[6]" operation="NodeShutdownOperation"/>
+    </at>
+   
+    <at t="30.1">
+        <tell module="lifecycleController" target="batman5Router[6]" operation="NodeStartOperation"/>
+    </at>
+</scenario>
